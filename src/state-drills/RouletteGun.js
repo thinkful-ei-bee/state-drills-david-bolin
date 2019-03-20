@@ -5,6 +5,7 @@ class RouletteGun extends React.Component {
     return (
       <div>
         <p>you're safe!</p>
+        <button>Pull the trigger!</button>
       </div>
     );
   }
