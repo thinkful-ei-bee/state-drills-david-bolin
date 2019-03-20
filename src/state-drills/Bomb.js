@@ -2,7 +2,6 @@ import React from 'react';
 
 class Bomb extends React.Component {
   state = {
-    content: 'tick',
     count: 0
   }
   
@@ -19,9 +18,20 @@ class Bomb extends React.Component {
   }
 
   render() {
+    let content = 'tick';
+    
+    if (this.state.count % 2 !== 0) {
+      content = 'tock'; 
+    }
+
+    if (this.state.count >= 8) {
+      content = 'BOOM!!!!';
+      clearInterval(this.interval);
+    }
+
     return (
       <div>
-        <p>{this.state.content}</p>
+        <p>{content}</p>
       </div>
     );
   }
