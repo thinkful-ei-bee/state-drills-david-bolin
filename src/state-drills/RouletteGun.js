@@ -1,6 +1,17 @@
 import React from 'react';
 
 class RouletteGun extends React.Component {
+  
+  static defaultProps = {
+    bulletInChamber: 8
+  }
+
+  state = {
+    chamber: null,
+    spinningTheChamber: false
+  }
+
+
   render() {
     return (
       <div>
