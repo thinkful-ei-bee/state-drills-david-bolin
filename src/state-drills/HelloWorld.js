@@ -9,6 +9,9 @@ class HelloWorld extends React.Component {
     return (
       <div>
         <p>Hello, {this.state.who}</p>
+        <button>World</button>
+        <button>Friend</button>
+        <button>React</button>
       </div>
     );
   }
