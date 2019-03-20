@@ -11,12 +11,17 @@ class RouletteGun extends React.Component {
     spinningTheChamber: false
   }
 
+  handleClick() {
+    this.setState({
+      spinningTheChamber: true
+    });
+  }
 
   render() {
     return (
       <div>
         <p>you're safe!</p>
-        <button>Pull the trigger!</button>
+        <button onClick={() => this.handleClick()}>Pull the trigger!</button>
       </div>
     );
   }
