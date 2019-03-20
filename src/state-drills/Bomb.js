@@ -2,7 +2,8 @@ import React from 'react';
 
 class Bomb extends React.Component {
   state = {
-    content: 'tick'
+    content: 'tick',
+    count: 0
   }
   
   render() {
