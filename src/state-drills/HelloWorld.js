@@ -5,11 +5,17 @@ class HelloWorld extends React.Component {
     who: 'world'
   }
   
+  handleClick(btn) {
+    this.setState({
+      who: btn
+    });
+  }
+
   render() {
     return (
       <div>
         <p>Hello, {this.state.who}</p>
-        <button>World</button>
+        <button onClick={() => this.handleClick('world!')}>World</button>
         <button>Friend</button>
         <button>React</button>
       </div>
