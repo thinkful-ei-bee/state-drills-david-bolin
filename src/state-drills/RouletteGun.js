@@ -2,7 +2,11 @@ import React from 'react';
 
 class RouletteGun extends React.Component {
   render() {
-    return <div></div>;
+    return (
+      <div>
+        <p>you're safe!</p>
+      </div>
+    );
   }
 }
 
