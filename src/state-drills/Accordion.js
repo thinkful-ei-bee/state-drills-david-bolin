@@ -7,10 +7,16 @@ export default class Accordion extends React.Component {
   }
   
   render() {
-    return (
-    <div>
+    const liArray = this.props.sections.map((section, i) => 
+      <li key={i}>
+        <button>{section.title}</button>
+      </li>
+    );
 
-    </div>
+    return (
+    <ul>
+      {liArray}
+    </ul>
     );
   }
 }
