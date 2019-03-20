@@ -16,8 +16,8 @@ class HelloWorld extends React.Component {
       <div>
         <p>Hello, {this.state.who}</p>
         <button onClick={() => this.handleClick('world!')}>World</button>
-        <button>Friend</button>
-        <button>React</button>
+        <button onClick={() => this.handleClick('friend!')}>Friend</button>
+        <button onClick={() => this.handleClick('React!')}>React</button>
       </div>
     );
   }
