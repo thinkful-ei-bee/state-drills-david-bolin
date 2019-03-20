@@ -28,9 +28,19 @@ class RouletteGun extends React.Component {
     clearTimeout(this.timeout);
   }
   render() {
+    let content = 'spinning the chamber and pulling the trigger!';
+    
+    if (!this.state.spinningTheChamber) {
+      if (this.state.chamber === this.props.bulletInChamber) {
+        content = 'BANG!!!!';
+      } else {
+        content = "you're safe!";
+      }
+    }
+
     return (
       <div>
-        <p>you're safe!</p>
+        <p>{content}</p>
         <button onClick={() => this.handleClick()}>Pull the trigger!</button>
       </div>
     );
